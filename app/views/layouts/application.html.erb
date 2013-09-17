@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body style="background: #AFBECD" class='<%= controller.controller_name %>'>
+	<div id="bgimg">
+	<%= image_tag("Blog1.jpg", height:200, width:400) 	%>
+	</div>
+	<div id="side"> 
+		<%= image_tag("Blog1.jpg", height:25) %>
+		<h1 align="center" style="color:#1d2f1f">MY BLOG</h1> 
+		<ul>
+			<li><a href="home#index">Home</a></li>
+		<!--	<li><a href="http://www..../faq">Questions</a></li>
+			<li><a href="http://www..../news">News</a></li>
+			<li><a href="http://www..../contact">Contact</a></li> -->
+		</ul>
+	</div>
+<div id="main">
+<%= yield %>
+</div>
+</body>
+</html>
